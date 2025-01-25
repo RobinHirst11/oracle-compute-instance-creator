@@ -1,0 +1,89 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.interval-control,
+.ad-control,
+.script-control {
+    width: 95%;
+    display: flex;
+    justify-content: center; /* Changed to center */
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px; /* Added consistent spacing */
+}
+
+.ad-control label,
+.ad-control input {
+    margin: 5px;
+}
+
+input {
+    font-family: "JetBrains Mono", monospace;
+    width: 100px;
+    padding: 8px;
+    border: 2px solid #36395A;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1em;
+}
+
+button {
+    display: flex; /* Added to center content */
+    align-items: center;
+    justify-content: center; /* Added to center content */
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    color: #36395A;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: box-shadow .15s, transform .15s;
+}
+
+.script-control {
+    justify-content: center;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset !important;
+}
+
+button:not(:disabled):hover {
+    box-shadow: rgba(140, 109, 206, 0.4) 0 4px 8px, rgba(145, 114, 214, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+button:not(:disabled):active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
